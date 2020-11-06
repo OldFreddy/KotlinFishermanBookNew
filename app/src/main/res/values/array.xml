@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fish">
+        <item>Сом</item>
+        <item>Налим</item>
+        <item>Щука</item>
+        <item>Карась</item>
+    </string-array>
+    <string-array name="fish_content">
+        <item>Обыкнове́нный сом, или европе́йский сом (лат. Silurus glanis) — крупная пресноводная бесчешуйчатая рыба семейства сомовых (Siluridae).</item>
+        <item>Нали́м, или обыкнове́нный нали́м (лат. Lota lota) — единственная исключительно пресноводная рыба отряда трескообразных (Gadiformes).</item>
+        <item>Щука, или обыкновенная щука (лат. Esox lucius), — рыба семейства щуковых.</item>
+        <item>Караси (лат. Carassius) — род лучепёрых рыб семейства карповых.</item>
+    </string-array>
+    <array name="fish_image_array">
+        <item>@drawable/som</item>
+        <item>@drawable/nalim</item>
+        <item>@drawable/shuca</item>
+        <item>@drawable/caras</item>
+    </array>
+
+    <string-array name="na">
+        <item>м</item>
+        <item>им</item>
+        <item>ука</item>
+        <item>арась</item>
+    </string-array>
+    <string-array name="na_content">
+        <item>qqq</item>
+        <item>www</item>
+        <item>eee</item>
+        <item>rrr</item>
+    </string-array>
+    <array name="na_image_array">
+        <item>@drawable/nalim</item>
+        <item>@drawable/som</item>
+        <item>@drawable/caras</item>
+        <item>@drawable/shuca</item>
+
+    </array>
+
+</resources>

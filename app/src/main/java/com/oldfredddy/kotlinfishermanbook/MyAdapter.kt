@@ -1,5 +1,6 @@
 package com.oldfredddy.kotlinfishermanbook
 
+import android.app.LauncherActivity
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -46,6 +47,12 @@ import androidx.recyclerview.widget.RecyclerView
         holder.bind(listItem, contextR)
 
     }
+
+     fun updateAdapter(listArray:List<ListItem>){
+         listArrayR.clear()
+         listArrayR.addAll(listArray)
+         notifyDataSetChanged()
+     }
 
 
 }
