@@ -2,6 +2,7 @@ package com.oldfredddy.kotlinfishermanbook
 
 import android.app.LauncherActivity
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
- class MyAdapter(listArray: ArrayList<ListItem>, context: Context) :
+class MyAdapter(listArray: ArrayList<ListItem>, context: Context) :
     RecyclerView.Adapter<MyAdapter.ViewHolder>() {
     var listArrayR = listArray
     var contextR = context
@@ -25,7 +26,14 @@ import androidx.recyclerview.widget.RecyclerView
             tvContent.text = listItem.contentText
             im.setImageResource(listItem.image_id)
             itemView.setOnClickListener {
-                Toast.makeText(context,"Pressed : ${tvTitle.text}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Pressed : ${tvTitle.text}", Toast.LENGTH_SHORT).show()
+                val i = Intent(context, ContentActivity::class.java).apply {
+                    putExtra("title", tvTitle.text.toString())
+                    putExtra("content", tvContent.text.toString())
+                    putExtra("image", listItem.image_id)
+                }
+                context.startActivity(i)
+
             }
 
 
@@ -48,11 +56,11 @@ import androidx.recyclerview.widget.RecyclerView
 
     }
 
-     fun updateAdapter(listArray:List<ListItem>){
-         listArrayR.clear()
-         listArrayR.addAll(listArray)
-         notifyDataSetChanged()
-     }
+    fun updateAdapter(listArray: List<ListItem>) {
+        listArrayR.clear()
+        listArrayR.addAll(listArray)
+        notifyDataSetChanged()
+    }
 
 
 }
