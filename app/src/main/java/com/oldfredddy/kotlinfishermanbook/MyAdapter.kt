@@ -38,6 +38,7 @@ class MyAdapter(listArray: ArrayList<ListItem>, context: Context) :
                     putExtra("title", tvTitle.text.toString())
                     putExtra("content", listItem.contentText)
                     putExtra("image", listItem.image_id)
+                    putExtra("pos", position)
                 }
                 context.startActivity(i)
 
